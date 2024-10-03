@@ -42,12 +42,14 @@ public class TreeProblems {
   public static void removeEven(Map<Integer, String> treeMap) {
 
     Iterator<Integer> iterator = treeMap.keySet().iterator();
-    while (iterator.hasNext()) {
-      Integer currentKey = iterator.next();
-      if (currentKey % 2 ==0) {
+    while (iterator.hasNext())
+      {
+      Integer ChKey = iterator.next();
+      if (ChKey % 2 ==0) 
+      {
         iterator.remove();
       }
-        }
+      }
   }
 
 
