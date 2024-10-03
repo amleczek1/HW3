@@ -62,9 +62,18 @@ public class TreeProblems {
 
   public boolean treesEqual(Map<Integer, String> tree1,Map<Integer, String> tree2 ) {
 
-    
-
-    return tree1.equals(tree2);
+        for (Map.Entry<Integer, String> entry : tree1.entrySet()) {
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+            if (!tree2.containsKey(key)) {
+                return false;
+            }
+            if (!value.equals(tree2.get(key))) {
+                return false;
+            }
+        }
+        return true;
+    //or return tree1.equals(tree2) lol
 
   }
 
